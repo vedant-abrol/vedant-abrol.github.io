@@ -1,0 +1,174 @@
+/* General Styling */
+body {
+    background: linear-gradient(120deg, #F1F1F1, #E6E9F0); /* Smooth gradient background */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Standard text color */
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #4D79FF, #85C1E9); /* Gradient for header */
+    color: white;
+    text-align: center;
+    padding: 50px 0; /* Padding for vertical spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow under header */
+}
+
+header h1 {
+    font-size: 2.5em; /* Larger font size for name */
+    font-weight: 700; /* Bold text for emphasis */
+    margin-bottom: 10px; /* Space between name and tagline */
+}
+
+header p {
+    font-size: 1.3em; /* Slightly smaller for tagline */
+}
+
+/* Navigation Styling */
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center navigation items */
+    gap: 20px; /* Space between navigation items */
+}
+
+nav ul li {
+    display: inline; /* Inline list items for horizontal alignment */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #4D79FF; /* Link color */
+    background-color: #E6E9F0; /* Light background for buttons */
+    padding: 12px 25px; /* Padding for buttons */
+    border-radius: 25px; /* Rounded corners for buttons */
+    font-weight: 500; /* Medium font weight */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #4D79FF; /* Change background on hover */
+    color: white; /* Change text color on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+
+/* Section Styling */
+section {
+    margin: 50px 10%; /* Margin for spacing from the sides */
+    padding: 20px;
+    background-color: white; /* White background for each section */
+    border-radius: 12px; /* Rounded corners for card effect */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #4D79FF; /* Heading color */
+    text-align: center;
+    border-bottom: 2px solid #E6E9F0; /* Border below heading */
+    padding-bottom: 10px; /* Padding below heading */
+    margin-bottom: 20px; /* Space after heading */
+}
+
+ul {
+    padding-left: 20px; /* Left padding for list */
+}
+
+li {
+    margin: 8px 0; /* Spacing between list items */
+    font-size: 1.1em; /* Slightly larger font size for better readability */
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #333; /* Standard text color for contact */
+}
+
+#contact p a {
+    color: #4D79FF; /* Link color */
+    text-decoration: none; /* Remove underline for links */
+}
+
+#contact p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Resume Link */
+.resume-link {
+    display: inline-block;
+    background-color: #4D79FF; /* Button color */
+    color: white; /* White text */
+    padding: 12px 24px; /* Padding for buttons */
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Medium weight */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+}
+
+.resume-link:hover {
+    background-color: #85C1E9; /* Lighter color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #4D79FF; /* Footer background */
+    color: white; /* Footer text color */
+    padding: 10px; /* Padding for footer */
+    text-align: center;
+    font-size: 0.85em; /* Smaller text for footer */
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect for footer */
+}
+
+/* Projects Button */
+.projects-button-container {
+    text-align: center;
+    margin: 40px 0; /* Spacing around the button */
+}
+
+.projects-button {
+    display: inline-block;
+    background-color: #4D79FF; /* Button color */
+    color: white; /* Text color */
+    padding: 15px 30px; /* Padding for button */
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Bold text */
+    font-size: 1.2em; /* Larger button text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+}
+
+.projects-button:hover {
+    background-color: #85C1E9; /* Lighter color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically on smaller screens */
+    }
+    
+    section {
+        margin: 30px 5%; /* Adjust margins for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.6em; /* Reduce heading size */
+    }
+    
+    .projects-button {
+        font-size: 1.1em; /* Adjust button size */
+    }
+}
