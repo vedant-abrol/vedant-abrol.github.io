@@ -1,174 +1,347 @@
 /* General Styling */
 body {
-    background: linear-gradient(120deg, #F1F1F1, #E6E9F0); /* Smooth gradient background */
-    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    background: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333; /* Standard text color */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #000; /* Full black background */
+    color: #fff !important; /* Ensuring white text across all sections */
+}
+
+header.dark-mode, footer.dark-mode {
+    background: #000; /* Full black for header and footer */
+}
+
+section.dark-mode {
+    background-color: #111 !important; /* Slightly lighter black for sections */
+    color: #fff !important; /* Ensuring section text turns white */
+}
+
+/* Style for buttons */
+button {
+    background-color: #fff; /* Default button background */
+    color: #4D79FF; /* Default button text color */
+    padding: 15px 30px; /* Increased padding for buttons */
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #4D79FF; /* Button hover effect */
+    color: #fff; /* Text color on hover */
+}
+
+/* Override individual section background color in dark mode */
+#profile.dark-mode,
+#experience.dark-mode,
+#skills.dark-mode,
+#projects.dark-mode,
+#contact.dark-mode {
+    background-color: #222 !important; /* Slightly lighter black for sections */
+    color: #fff !important;
 }
 
 /* Header Styling */
+
 header {
-    background: linear-gradient(135deg, #4D79FF, #85C1E9); /* Gradient for header */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('nyc_skyline_1.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
-    padding: 50px 0; /* Padding for vertical spacing */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow under header */
+    padding: 80px 0; /* Keep existing padding */
+    position: relative;
+    margin-bottom: 40px; /* Increased margin-bottom for more space */
 }
 
 header h1 {
-    font-size: 2.5em; /* Larger font size for name */
-    font-weight: 700; /* Bold text for emphasis */
-    margin-bottom: 10px; /* Space between name and tagline */
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-top: 100px; /* Can keep this the same */
+    margin-bottom: 10px; /* Can keep this the same */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 header p {
-    font-size: 1.3em; /* Slightly smaller for tagline */
+    font-size: 1.4em;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Dark Mode Toggle Styling */
+.dark-mode-toggle {
+    position: absolute; /* Position it in the header */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.dark-mode-label {
+    margin-left: 10px; /* Space between toggle and label */
+    font-size: 1.3em; /* Increase font size */
+    color: #fff; /* White text for dark mode */
+}
+
+/* Slider styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px; /* Width of the switch */
+    height: 34px; /* Height of the switch */
+    margin-left: 10px; /* Space from the label */
+}
+
+.switch input {
+    opacity: 0; /* Hide the default checkbox */
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Background color */
+    transition: .4s; /* Transition effect */
+    border-radius: 34px; /* Rounded corners */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px; /* Height of the circle */
+    width: 26px; /* Width of the circle */
+    left: 4px; /* Circle position */
+    bottom: 4px; /* Circle position */
+    background-color: white; /* Circle color */
+    transition: .4s; /* Transition effect */
+    border-radius: 50%; /* Circle shape */
+}
+
+/* Checkbox checked styling */
+input:checked + .slider {
+    background-color: #4D79FF; /* Color when checked */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Move the circle when checked */
 }
 
 /* Navigation Styling */
 nav {
-    text-align: center;
-    margin-top: 20px;
+    background-color: transparent; /* Make nav background transparent */
+    padding: 0; /* Remove padding to align with header */
+    position: absolute; /* Positioning the nav absolutely */
+    top: 80px; /* Adjust to position it right below the header title */
+    width: 100%; /* Full width */
+    z-index: 10; /* Ensure it stays above other content */
 }
 
 nav ul {
-    list-style: none; /* Remove default list styling */
+    list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center; /* Center navigation items */
-    gap: 20px; /* Space between navigation items */
+    margin: 0;
+    display: flex; /* Use flexbox for better spacing */
+    justify-content: center; /* Center the nav items */
 }
 
 nav ul li {
-    display: inline; /* Inline list items for horizontal alignment */
+    margin: 0 15px; /* Increased space between items */
 }
 
 nav ul li a {
-    text-decoration: none; /* Remove underline */
-    color: #4D79FF; /* Link color */
-    background-color: #E6E9F0; /* Light background for buttons */
-    padding: 12px 25px; /* Padding for buttons */
-    border-radius: 25px; /* Rounded corners for buttons */
-    font-weight: 500; /* Medium font weight */
-    transition: background 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 10px 30px; /* Increased padding for buttons */
+    border-radius: 25px;
+    transition: background 0.3s, transform 0.3s;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
 }
 
 nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Change background on hover */
+    color: #4D79FF;
+    transform: scale(1.05);
+}
+
+/* Section Backgrounds */
+section {
+    padding: 60px 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#profile {
+    background-color: #f0f0f5;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#experience {
+    background-color: #f0f8ff;
+}
+
+#skills {
+    background-color: #fdfd96;
+}
+
+#projects {
+    background-color: #e0f7fa; /* Default light background */
+}
+
+/* Updated Project Card for Dark Mode */
+.dark-mode #projects {
+    background-color: #222; /* Dark background for dark mode */
+}
+
+/* Contact */
+#contact {
+    background-color: #ffe4e1;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4D79FF;
+    font-weight: bold;
+}
+
+/* Skills Section */
+.skill-set {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Adds space between skills */
+}
+
+.skill {
+    background-color: #fff; /* Default background for skills */
+    color: #4D79FF; /* Default text color for skills */
+    padding: 10px 15px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Skills hover effect */
+.skill:hover {
     background-color: #4D79FF; /* Change background on hover */
     color: white; /* Change text color on hover */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
 }
 
-/* Section Styling */
-section {
-    margin: 50px 10%; /* Margin for spacing from the sides */
+/* Projects Cards */
+.project-card {
+    background-color: #fff; /* Default background */
     padding: 20px;
-    background-color: white; /* White background for each section */
-    border-radius: 12px; /* Rounded corners for card effect */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h2 {
-    font-size: 1.8em;
+/* Styles for the project card in dark mode */
+.dark-mode .project-card {
+    background-color: #222; /* Dark background for dark mode */
+    color: #fff; /* White text for dark mode */
+    border: 2px solid #fff; /* Optional border for visibility */
+}
+
+/* Additional styling for project card links in dark mode */
+.dark-mode .project-card a {
+    color: #85C1E9; /* Change link color in dark mode */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #4D79FF; /* Default link color */
     font-weight: 600;
-    color: #4D79FF; /* Heading color */
-    text-align: center;
-    border-bottom: 2px solid #E6E9F0; /* Border below heading */
-    padding-bottom: 10px; /* Padding below heading */
-    margin-bottom: 20px; /* Space after heading */
+    transition: color 0.3s;
 }
 
-ul {
-    padding-left: 20px; /* Left padding for list */
+.project-card a:hover {
+    color: #85C1E9; /* Link color on hover */
 }
 
-li {
-    margin: 8px 0; /* Spacing between list items */
-    font-size: 1.1em; /* Slightly larger font size for better readability */
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Contact Section */
-#contact p {
+#contact-form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contact-form input, 
+#contact-form textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     font-size: 1.1em;
-    margin-bottom: 15px;
-    color: #333; /* Standard text color for contact */
 }
 
-#contact p a {
-    color: #4D79FF; /* Link color */
-    text-decoration: none; /* Remove underline for links */
+#contact-form button {
+    padding: 15px 30px;
+    background-color: #4D79FF;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#contact p a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Resume Link */
-.resume-link {
-    display: inline-block;
-    background-color: #4D79FF; /* Button color */
-    color: white; /* White text */
-    padding: 12px 24px; /* Padding for buttons */
-    border-radius: 25px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-weight: 500; /* Medium weight */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
-}
-
-.resume-link:hover {
-    background-color: #85C1E9; /* Lighter color on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+#contact-form button:hover {
+    background-color: #85C1E9;
+    transform: scale(1.05);
 }
 
 /* Footer Styling */
 footer {
-    background-color: #4D79FF; /* Footer background */
-    color: white; /* Footer text color */
-    padding: 10px; /* Padding for footer */
+    background-color: #4D79FF;
+    color: white;
     text-align: center;
-    font-size: 0.85em; /* Smaller text for footer */
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect for footer */
+    padding: 15px;
+    font-size: 0.9em;
+    margin-top: 50px;
 }
 
-/* Projects Button */
-.projects-button-container {
-    text-align: center;
-    margin: 40px 0; /* Spacing around the button */
-}
-
-.projects-button {
-    display: inline-block;
-    background-color: #4D79FF; /* Button color */
-    color: white; /* Text color */
-    padding: 15px 30px; /* Padding for button */
-    border-radius: 25px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-weight: 600; /* Bold text */
-    font-size: 1.2em; /* Larger button text */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
-}
-
-.projects-button:hover {
-    background-color: #85C1E9; /* Lighter color on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Stack navigation items vertically on smaller screens */
-    }
-    
-    section {
-        margin: 30px 5%; /* Adjust margins for smaller screens */
-    }
-
-    h2 {
-        font-size: 1.6em; /* Reduce heading size */
-    }
-    
-    .projects-button {
-        font-size: 1.1em; /* Adjust button size */
-    }
+/* Smooth transition for Dark Mode */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
