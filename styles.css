@@ -1,6 +1,6 @@
 /* General Styling */
 body {
-    background: #f4f4f4;
+    background: #222;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -145,11 +145,12 @@ input:checked + .slider:before {
 /* Navigation Styling */
 nav {
     background-color: transparent; /* Make nav background transparent */
-    padding: 0; /* Remove padding to align with header */
-    position: absolute; /* Positioning the nav absolutely */
-    top: 80px; /* Adjust to position it right below the header title */
+    /*padding: 20px; /* Remove padding to align with header */
+    position: relative; /* Positioning the nav absolutely */
+    /* top: 80px; /* Adjust to position it right below the header title */
     width: 100%; /* Full width */
     z-index: 10; /* Ensure it stays above other content */
+    bottom: 10px;
 }
 
 nav ul {
@@ -187,6 +188,7 @@ section {
     border-radius: 12px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, color 0.3s ease;
+    background: white;
 }
 
 #profile {
@@ -242,6 +244,7 @@ h2 {
     border-radius: 20px; /* Rounded corners */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    transform: 'translateY(0)';
 }
 
 /* Skills hover effect */
