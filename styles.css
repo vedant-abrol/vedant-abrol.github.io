@@ -345,3 +345,82 @@ footer {
 * {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+@media (max-width: 768px) {
+    /* General body and font adjustments for mobile */
+    body {
+        padding: 10px; /* Adjust body padding */
+    }
+
+    /* Header styling */
+    header {
+        padding: 40px 20px; /* Reduce padding for mobile */
+    }
+
+    header h1 {
+        font-size: 2.5em; /* Reduce font size for mobile */
+        margin-top: 60px; /* Adjust margin */
+    }
+
+    header p {
+        font-size: 1.2em; /* Adjust paragraph font size */
+    }
+
+    /* Navigation adjustments */
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center align nav items */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space out nav items */
+    }
+
+    /* Button adjustments */
+    button {
+        width: 100%; /* Make buttons full-width */
+        padding: 12px 0; /* Adjust padding for mobile */
+        font-size: 1em; /* Adjust font size for better fit */
+    }
+
+    /* Section adjustments */
+    section {
+        padding: 40px 10px; /* Adjust section padding */
+    }
+
+    h2 {
+        font-size: 2em; /* Reduce section heading font size */
+    }
+
+    /* Skills section adjustments */
+    .skill-set {
+        flex-direction: column; /* Stack skills vertically on mobile */
+        align-items: center; /* Center align skills */
+    }
+
+    .skill {
+        margin: 5px 0; /* Space out skills */
+        width: 100%; /* Make skill buttons full-width */
+    }
+
+    /* Project card adjustments */
+    .project-card {
+        max-width: 100%; /* Ensure project cards are full-width */
+    }
+
+    /* Contact form adjustments */
+    #contact-form {
+        padding: 20px; /* Adjust padding for mobile */
+    }
+
+    #contact-form input, 
+    #contact-form textarea {
+        font-size: 1em; /* Adjust font size for inputs */
+    }
+
+    /* Footer adjustments */
+    footer {
+        font-size: 0.8em; /* Reduce footer font size */
+    }
+}
+
