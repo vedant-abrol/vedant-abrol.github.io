@@ -1,429 +1,297 @@
-/* General Styling */
+/* General Styles */
 body {
-    background: #222;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    background: #000; /* Dark theme background */
+    color: #fff;
     line-height: 1.6;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    background: #000; /* Full black background */
-    color: #fff !important; /* Ensuring white text across all sections */
-}
-
-header.dark-mode, footer.dark-mode {
-    background: #000; /* Full black for header and footer */
-}
-
-section.dark-mode {
-    background-color: #111 !important; /* Slightly lighter black for sections */
-    color: #fff !important; /* Ensuring section text turns white */
-}
-
-/* Style for buttons */
-button {
-    background-color: #fff; /* Default button background */
-    color: #4D79FF; /* Default button text color */
-    padding: 15px 30px; /* Increased padding for buttons */
-    border: none;
-    border-radius: 25px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-    background-color: #4D79FF; /* Button hover effect */
-    color: #fff; /* Text color on hover */
-}
-
-/* Override individual section background color in dark mode */
-#profile.dark-mode,
-#experience.dark-mode,
-#skills.dark-mode,
-#projects.dark-mode,
-#contact.dark-mode {
-    background-color: #222 !important; /* Slightly lighter black for sections */
-    color: #fff !important;
-}
-
-/* Header Styling */
-
-header {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('nyc_skyline_1.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 80px 0; /* Keep existing padding */
-    position: relative;
-    margin-bottom: 40px; /* Increased margin-bottom for more space */
-}
-
-header h1 {
-    font-size: 3.5em;
-    font-weight: bold;
-    margin-top: 100px; /* Can keep this the same */
-    margin-bottom: 10px; /* Can keep this the same */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-header p {
-    font-size: 1.4em;
-    margin-top: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-
-
-/* Dark Mode Toggle Styling */
-.dark-mode-toggle {
-    position: absolute; /* Position it in the header */
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    display: flex;
-    align-items: center; /* Center vertically */
-}
-
-.dark-mode-label {
-    margin-left: 10px; /* Space between toggle and label */
-    font-size: 1.3em; /* Increase font size */
-    color: #fff; /* White text for dark mode */
-}
-
-/* Slider styling */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px; /* Width of the switch */
-    height: 34px; /* Height of the switch */
-    margin-left: 10px; /* Space from the label */
-}
-
-.switch input {
-    opacity: 0; /* Hide the default checkbox */
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc; /* Background color */
-    transition: .4s; /* Transition effect */
-    border-radius: 34px; /* Rounded corners */
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px; /* Height of the circle */
-    width: 26px; /* Width of the circle */
-    left: 4px; /* Circle position */
-    bottom: 4px; /* Circle position */
-    background-color: white; /* Circle color */
-    transition: .4s; /* Transition effect */
-    border-radius: 50%; /* Circle shape */
-}
-
-/* Checkbox checked styling */
-input:checked + .slider {
-    background-color: #4D79FF; /* Color when checked */
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px); /* Move the circle when checked */
-}
-
-/* Navigation Styling */
-nav {
-    background-color: transparent; /* Make nav background transparent */
-    /*padding: 20px; /* Remove padding to align with header */
-    position: relative; /* Positioning the nav absolutely */
-    /* top: 80px; /* Adjust to position it right below the header title */
-    width: 100%; /* Full width */
-    z-index: 10; /* Ensure it stays above other content */
-    bottom: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Use flexbox for better spacing */
-    justify-content: center; /* Center the nav items */
-}
-
-nav ul li {
-    margin: 0 15px; /* Increased space between items */
-}
-
-nav ul li a {
-    color: white;
-    font-size: 1.1em;
+/* Links */
+a {
     text-decoration: none;
-    padding: 10px 30px; /* Increased padding for buttons */
-    border-radius: 25px;
-    transition: background 0.3s, transform 0.3s;
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    color: #4caf50;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Change background on hover */
-    color: #4D79FF;
-    transform: scale(1.05);
+a:hover {
+    color: #66ff99;
 }
 
-/* Section Backgrounds */
-section {
-    padding: 60px 20px;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background: white;
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-#profile {
-    background-color: #f0f0f5;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+    justify-content: center;
 }
 
-#experience {
-    background-color: #f0f8ff;
+.nav-links li a {
+    font-weight: 500;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-#skills {
-    background-color: #fdfd96;
+.nav-links li a:hover {
+    background: #4caf50;
+    color: #000;
 }
 
-#projects {
-    background-color: #e0f7fa; /* Default light background */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
 }
 
-/* Updated Project Card for Dark Mode */
-.dark-mode #projects {
-    background-color: #222; /* Dark background for dark mode */
+.social-icons a {
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
-/* Contact */
-#contact {
-    background-color: #ffe4e1;
+.social-icons a:hover {
+    color: #4caf50;
 }
 
-/* Section Headings */
-h2 {
+/* Hero Section (Homepage) */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #111, #222);
+    text-align: center;
+    padding: 20px; /* Ensure proper spacing for mobile screens */
+}
+
+.symbol-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow symbols to wrap for smaller screens */
+    justify-content: center; /* Center-align content */
+}
+
+.coding-symbol {
     font-size: 2.5em;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.8em; /* Adjust font size for better fit on mobile */
+    font-weight: 700;
+    margin: 15px 0; /* Add margin for spacing */
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.animated-text {
+    font-size: 1.4em; /* Reduce size for mobile screens */
+    font-weight: 300;
+    color: #4caf50;
+    margin-top: 15px; /* Add spacing below title */
+    min-height: 2em;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Sections */
+.section {
+    padding: 60px 15px; /* Reduced padding for smaller screens */
+    margin: 20px auto;
+    max-width: 95%; /* Ensure section width fits mobile view */
+    background: #222;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.section:hover {
+    background: #333;
+    transform: scale(1.01);
+}
+
+.section h2 {
+    font-size: 2em; /* Adjusted font size */
+    color: #4caf50;
     text-align: center;
     margin-bottom: 30px;
-    color: #4D79FF;
-    font-weight: bold;
 }
 
 /* Skills Section */
-.skill-set {
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ensure proper spacing and alignment */
+    gap: 20px; /* Add more spacing between items */
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.skill-item {
+    width: 150px; /* Fixed width for uniform size */
+    height: 150px; /* Fixed height for uniform size */
+    background: #333;
+    border-radius: 10px;
+    padding: 15px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px; /* Adds space between skills */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
 }
 
-.skill {
-    background-color: #fff; /* Default background for skills */
-    color: #4D79FF; /* Default text color for skills */
-    padding: 10px 15px;
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-    transform: 'translateY(0)';
+.skill-item:hover {
+    transform: scale(1.1);
+    background: #4caf50;
+    color: #fff;
 }
 
-/* Skills hover effect */
-.skill:hover {
-    background-color: #4D79FF; /* Change background on hover */
-    color: white; /* Change text color on hover */
+.skill-item i {
+    font-size: 2em; /* Adjust icon size */
+    margin-bottom: 10px;
+    color: #4caf50;
+    transition: color 0.3s ease;
 }
 
-/* Projects Cards */
-.project-card {
-    background-color: #fff; /* Default background */
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
+.skill-item:hover i {
+    color: #fff;
+}
+
+.skill-item span {
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Project and Experience Cards */
+.project-card,
+.experience-card {
+    background: #333;
+    padding: 15px; /* Reduced padding */
     border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Styles for the project card in dark mode */
-.dark-mode .project-card {
-    background-color: #222; /* Dark background for dark mode */
-    color: #fff; /* White text for dark mode */
-    border: 2px solid #fff; /* Optional border for visibility */
+.project-card p,
+.experience-card p {
+    line-height: 1.8; /* Improve readability */
+    margin-bottom: 15px;
+    text-align: left; /* Left-align content for mobile readability */
 }
 
-/* Additional styling for project card links in dark mode */
-.dark-mode .project-card a {
-    color: #85C1E9; /* Change link color in dark mode */
+.project-card:hover,
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px; /* Reduced padding */
+    background: #111;
+    font-size: 0.9em; /* Adjusted for mobile */
+    color: #fff;
 }
 
-.project-card a {
-    text-decoration: none;
-    color: #4D79FF; /* Default link color */
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.project-card a:hover {
-    color: #85C1E9; /* Link color on hover */
-}
-
-/* Contact Form */
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-#contact-form label {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#contact-form input, 
-#contact-form textarea {
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1.1em;
-}
-
-#contact-form button {
-    padding: 15px 30px;
-    background-color: #4D79FF;
-    color: white;
+/* Scroll-to-Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #4caf50;
+    color: #fff;
     border: none;
-    border-radius: 25px;
+    border-radius: 50%;
     font-size: 1.2em;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
-#contact-form button:hover {
-    background-color: #85C1E9;
-    transform: scale(1.05);
+.scroll-to-top.show {
+    display: block;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #4D79FF;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
-    margin-top: 50px;
+.scroll-to-top:hover {
+    background: #66ff99;
+    transform: scale(1.1);
 }
 
-/* Smooth transition for Dark Mode */
-* {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    /* General body and font adjustments for mobile */
-    body {
-        padding: 10px; /* Adjust body padding */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Add spacing between navigation items */
     }
 
-    /* Header styling */
     header {
-        padding: 40px 20px; /* Reduce padding for mobile */
+        height: auto; /* Allow content to determine height */
+        padding: 30px 20px;
     }
 
-    header h1 {
-        font-size: 2.5em; /* Reduce font size for mobile */
-        margin-top: 60px; /* Adjust margin */
+    h1 {
+        font-size: 2.2em; /* Further reduce title size for better fit */
     }
 
-    header p {
-        font-size: 1.2em; /* Adjust paragraph font size */
+    .animated-text {
+        font-size: 1.2em; /* Adjust size for subtitle */
     }
 
-    /* Navigation adjustments */
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically */
-        align-items: center; /* Center align nav items */
+    .symbol-wrapper {
+        flex-direction: column; /* Stack symbols and text */
+        gap: 10px; /* Reduce spacing between elements */
     }
 
-    nav ul li {
-        margin: 10px 0; /* Space out nav items */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust badges for smaller screens */
     }
 
-    /* Button adjustments */
-    button {
-        width: 100%; /* Make buttons full-width */
-        padding: 12px 0; /* Adjust padding for mobile */
-        font-size: 1em; /* Adjust font size for better fit */
+    .section h2 {
+        font-size: 1.8em; /* Reduce heading size for smaller screens */
     }
 
-    /* Section adjustments */
-    section {
-        padding: 40px 10px; /* Adjust section padding */
+    .project-card p,
+    .experience-card p {
+        text-align: left; /* Ensure readability for project descriptions */
     }
 
-    h2 {
-        font-size: 2em; /* Reduce section heading font size */
-    }
-
-    /* Skills section adjustments */
-    .skill-set {
-        flex-direction: column; /* Stack skills vertically on mobile */
-        align-items: center; /* Center align skills */
-    }
-
-    .skill {
-        margin: 5px 0; /* Space out skills */
-        width: 100%; /* Make skill buttons full-width */
-    }
-
-    /* Project card adjustments */
-    .project-card {
-        max-width: 100%; /* Ensure project cards are full-width */
-    }
-
-    /* Contact form adjustments */
-    #contact-form {
-        padding: 20px; /* Adjust padding for mobile */
-    }
-
-    #contact-form input, 
-    #contact-form textarea {
-        font-size: 1em; /* Adjust font size for inputs */
-    }
-
-    /* Footer adjustments */
-    footer {
-        font-size: 0.8em; /* Reduce footer font size */
+    .skill-item {
+        width: 120px; /* Adjusted width for smaller screens */
+        height: 120px; /* Adjusted height for smaller screens */
     }
 }
-
