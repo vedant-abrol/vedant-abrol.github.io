@@ -3,149 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vedant Rakesh Abrol Portfolio</title>
+    <title>Vedant Rakesh Abrol</title>
 
-    <!-- Google Fonts: Poppins -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome Icons -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Vedant Rakesh Abrol</h1>
-        <p>&nbsp;<span id="dynamic-text"></span></p>
-        <div class="dark-mode-toggle">
-            <label class="switch">
-                <input type="checkbox" id="darkModeToggle">
-                <span class="slider"></span>
-            </label>
-            <span class="dark-mode-label"><i class="fas fa-moon"></i> Dark Mode</span>
-        </div>
-    </header>
-    
+    <!-- Navigation -->
     <nav>
-        <ul>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#experience">Experience</a></li>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#resume">Resume</a></li>
         </ul>
+        <div class="social-icons">
+            <a href="https://github.com/vedant-abrol" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/vedant-abrol" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:va398@njit.edu"><i class="fas fa-envelope"></i></a>
+        </div>
     </nav>
 
-    <section id="profile">
-        <h2>Profile Summary</h2>
-        <p>
-            Skilled Software Engineer with 2+ years of experience in full-stack development and data analysis. Proficient in developing and optimizing distributed systems using C++, Java, Python, and Scala. Expertise in AI model evaluation, data pipeline design, and building secure, scalable applications. Experienced in modern cloud technologies such as Docker, Kubernetes, and CI/CD, along with data-driven tools like Spark and Apache Kafka, ensuring high-performance software delivery and data analysis workflows.
-         </p>
-    </section>
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content">
+            <div class="symbol-wrapper">
+                <span class="coding-symbol">&lt;/&gt;</span>
+                <h1>Vedant Rakesh Abrol</h1>
+                <span class="coding-symbol">&lt;/&gt;</span>
+            </div>
+            <p class="animated-text"></p>
+        </div>
+    </header>
 
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <div class="job">
-            <h3>Freelance Coder, OUTLIER AI</h3>
-            <p>USA (Remote)</p>
-            <ul>
-                <li>Evaluated AI-generated code, developed and managed the SQL pipeline for Flamingo Coding's MultiTurn Deviations.</li>
-                <li>Assessed large language models (LLMs) by rating and justifying code responses based on tool dimensions and effectiveness.</li>
-                <li>Conducted data analysis on large datasets, identifying patterns and insights to improve AI model performance.</li>
-            </ul>
-        </div>
-    
-        <div class="job">
-            <h3>Software Engineer Intern, SCIENAPTIC AI</h3>
-            <p>Aug 2022 - Aug 2023</p>
-            <ul>
-                <li>Worked as a full-stack developer utilizing the tech stack including Scala, Java, Play Framework, HTML/CSS, Typescript, SQL, XML, JSON, Gremlin, and JanusGraph.</li>
-                <li>Contributed to the main codebase (iris) by implementing software changes based on design specifications and developing, testing, and implementing software solutions.</li>
-                <li>Analyzed and resolved complex technical issues to ensure project success and meet business requirements.</li>
-            </ul>
-        </div>
-    
-        <div class="job">
-            <h3>Summer Research Intern, NEW YORK UNIVERSITY (NYU)</h3>
-            <p>June 2022 - July 2022</p>
-            <ul>
-                <li>Project Title: Additive Manufacturing Cybersecurity.</li>
-                <li>Topic: Direct Digital Manufacturing with 3D Printing: Designing for Security under Prof. Nikhil Gupta (NYU Tandon School of Engineering).</li>
-                <li>Secured/Encrypted CAD files and addressed vulnerabilities in additive manufacturing to prevent cyber-attacks.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="skills">
+    <section id="skills" class="section">
         <h2>Skills</h2>
-        <div class="skill-set">
-            <span class="skill"><i class="fas fa-code"></i> Python</span>
-            <span class="skill"><i class="fas fa-code"></i> Java</span>
-            <span class="skill"><i class="fas fa-code"></i> C++</span>
-            <span class="skill"><i class="fas fa-code"></i> R</span>
-            <span class="skill"><i class="fas fa-code"></i> Scala</span>
-            <span class="skill"><i class="fas fa-code"></i> Postman</span>
-            <span class="skill"><i class="fas fa-code"></i> Git</span>
-            <span class="skill"><i class="fas fa-code"></i> HTML, CSS, Javascript</span>
-            <span class="skill"><i class="fas fa-code"></i> MySQL</span>
-            <span class="skill"><i class="fas fa-database"></i> MongoDB</span>
-            <span class="skill"><i class="fas fa-server"></i> RESTful APIs</span>
-            <span class="skill"><i class="fas fa-cloud"></i> AWS</span>
+        
+        <!-- Languages and Frameworks -->
+        <div class="skills-subsection">
+            <h3>Languages and Frameworks</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-java"></i>
+                    <span>Java</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Scala</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <span>C++</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <span>C</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-toolbox"></i>
+                    <span>Play Framework</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react"></i>
+                    <span>ReactJS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-node-js"></i>
+                    <span>NodeJS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <span>TypeScript</span>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Libraries -->
+        <div class="skills-subsection">
+            <h3>Libraries & Database</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Gremlin</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>JanusGraph</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>MongoDB</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>Cassandra</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-aws"></i>
+                    <span>AWS SDK</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-aws"></i>
+                    <span>Rekognition</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-stream"></i>
+                    <span>SQS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Pandas</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>NumPy</span>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Tools -->
+        <div class="skills-subsection">
+            <h3>Tools</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-toolbox"></i>
+                    <span>Postman</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-docker"></i>
+                    <span>Docker</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-network-wired"></i>
+                    <span>Kubernetes</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-stream"></i>
+                    <span>CI/CD (Jenkins)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-server"></i>
+                    <span>Apache Tomcat</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-aws"></i>
+                    <span>AWS (EC2, S3, SQS, Lambda)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>SQL Developer</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-tools"></i>
+                    <span>Terraform</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-file-archive"></i>
+                    <span>Maven</span>
+                </div>
+            </div>
         </div>
     </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
     
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
         <div class="project-card">
             <h3>Personalized Event Recommendation Engine</h3>
-            <ul>
-                <li>Developed a full-stack event recommendation application using the TicketMaster API to suggest events based on user geolocation and preferences.</li>
-                <li>Implemented secure user authentication, designed an algorithm for personalized recommendations, and integrated geo-location features.</li>
-                <li>Managed data with MySQL and MongoDB and created RESTful APIs. Built a responsive UI and deployed the backend with Java on Apache Tomcat.</li>
-            </ul>
+            <p>
+                Developed a full-stack recommendation engine using the TicketMaster API to suggest events based on geolocation and user preferences.
+                Implemented secure user authentication, designed algorithms for personalized recommendations, and integrated geolocation features.
+                Managed data with MySQL and MongoDB, created RESTful APIs, and built a responsive UI, deploying the backend with Java on Apache Tomcat.
+            </p>
             <a href="https://github.com/vedant-abrol/Personalized-Event-Recommendation-Engine" target="_blank">View on GitHub</a>
         </div>
-    
+        <div class="project-card">
+            <h3>HackNJIT MLH Challenge - POS Receipt Data Analysis</h3>
+            <p>
+                Developed a data processing pipeline using AWS services (S3, Lambda, Athena) to analyze and visualize POS receipt data in .stm format.
+                Automated cloud infrastructure setup with Terraform and created interactive dashboards in PowerBI for real-time analytics and performance insights.
+            </p>
+            <a href="https://github.com/vedant-abrol/HackNJIT_Challenge_Star_Micronics" target="_blank">View on GitHub</a>
+        </div>
         <div class="project-card">
             <h3>AWS Image Recognition Pipeline</h3>
-            <ul>
-                <li>Developed a cloud-native image recognition application using AWS services: EC2, S3, SQS, and Rekognition.</li>
-                <li>Built a parallel system with two EC2 instances, where one detects cars in images (confidence > 80%) and the other performs text recognition, processing results in parallel.</li>
-                <li>Ensured efficient communication between instances via SQS, storing results in S3 with 100% accuracy and implemented in Java on Amazon Linux, optimizing cloud resource usage for cost efficiency.</li>
-            </ul>
+            <p>
+                Developed a cloud-native application using AWS services (EC2, S3, SQS, Rekognition) for image recognition.
+                Achieved 100% accurate identification and extraction of cars and text from datasets with confidence thresholds above 80%.
+            </p>
+            <a href="https://github.com/vedant-abrol/AWS-Image-Recognition-Pipeline" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>Sales Forecasting Model for Retail Analytics</h3>
+            <p>
+                Developed predictive models using XGBoost to forecast monthly sales across shops and product categories.
+                Implemented cross-validation and evaluated model performance using RMSE for reliable sales forecasts.
+            </p>
+            <a href="https://github.com/vedant-abrol/Sales-Forecasting-Model-for-Retail-Analytics" target="_blank">View on GitHub</a>
         </div>
     </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form" action="https://formspree.io/f/mpwzwagv" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2>Professional Experience</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Software Engineer Intern</h3>
+                    <span class="duration">Aug 2022 – Aug 2023</span>
+                </div>
+                <div class="experience-company">Scienaptic AI</div>
+                <div class="experience-content">
+                    <ul>
+                        <li>Enhanced Scienaptic’s AI-driven credit underwriting platform by implementing efficient back-end logic and responsive front-end features.</li>
+                    <li>Improved processing efficiency by 15% by optimizing complex queries and code structures in large-scale graph databases, leading to faster data retrieval and processing.</li>
+                    <li>Designed, implemented, and validated scalable APIs to integrate real-time data pipelines for financial institutions, reducing loan approval time by 30% and ensuring seamless functionality across services using Postman for testing.</li>
+                    <li>Integrated machine learning models into the decisioning platform, enhancing predictive accuracy and risk management.</li>
+                    <li>Conducted performance tuning and stress testing on the credit assessment pipeline, ensuring system reliability and scalability under high transaction loads.</li>
+                    <li>Built and maintained CI/CD pipelines to streamline deployment processes, reducing manual intervention and improving code delivery speed by 20%.</li>
+                    <li>Worked closely with cross-functional teams to translate business requirements into technical solutions, ensuring compliance with industry standards and regulations.</li>
+                    <li><strong>Tech Stack:</strong> Java, Scala, Play Framework, Cassandra, JanusGraph, Gremlin, Postman</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Summer Research Intern</h3>
+                    <span class="duration">Jun 2022 – Jul 2022</span>
+                </div>
+                <div class="experience-company">New York University (NYU)</div>
+                <div class="experience-content">
+                    <ul>
+                        <li>Conducted research on additive manufacturing cybersecurity under Prof. Nikhil Gupta.</li>
+                        <li>Developed security measures for CAD files to prevent cyber-attacks.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Freelance Coder</h3>
+                    <span class="duration">Remote</span>
+                </div>
+                <div class="experience-company">Outlier AI</div>
+                <div class="experience-content">
+                    <ul>
+                        <li>Optimized AI-generated code while managing SQL pipelines for Flamingo Coding.</li>
+                        <li>Conducted performance evaluations and analyzed large datasets for actionable insights.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="resume">
+    <!-- Resume Section -->
+    <section id="resume" class="section">
         <h2>Resume</h2>
-        <p>You can view or download my resume by clicking the link below:</p>
-        <a href="https://github.com/vedant-abrol/resume/blob/main/Vedant_Abrol_Resume_.pdf" target="_blank" class="resume-link">
-            Download My Resume (PDF)
-        </a>
+        <p>
+            Download my <a href="https://github.com/vedant-abrol/Resume_Updated/blob/main/Vedant_Abrol_Resume.pdf" target="_blank">Resume</a>.
+        </p>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Vedant Rakesh Abrol</p>
+        <p>&copy; <span id="footer-year"></span> Vedant Rakesh Abrol</p>
     </footer>
 
     <script src="script.js"></script>
